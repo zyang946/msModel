@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:msMODEL="http://www.rm2pt.com/msMODEL" xmlns:rEMODEL="http://www.example.org/rEMODEL" name="trainticket">
+  <microservice name="travel-service" provide="//@interface.0 //@interface.1" require="//@interface.6 //@interface.9 //@interface.5 //@interface.2"/>
+  <microservice name="station-service" provide="//@interface.8 //@interface.10">
+    <domainmodel name="">
+      <entity isCRUD="true" name="Station">
+        <attributes name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="stayTime">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+      </entity>
+    </domainmodel>
+  </microservice>
+  <microservice name="train-service" provide="//@interface.6 //@interface.7">
+    <domainmodel>
+      <entity isCRUD="true" name="TrainType">
+        <attributes name="id">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="economyClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="confortClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="averageSpeed">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+      </entity>
+    </domainmodel>
+  </microservice>
+  <microservice name="route-service" provide="//@interface.3 //@interface.4">
+    <domainmodel>
+      <entity isCRUD="true" name="Route">
+        <attributes name="id">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="stations" ismultiple="true">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="distances" ismultiple="true">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </attributes>
+        <attributes name="startStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="endStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+      </entity>
+      <entity name="RouteInfo"/>
+    </domainmodel>
+  </microservice>
+  <microservice name="admin-travel-service"/>
+  <interface xsi:type="msMODEL:Provided" name="createTravel"/>
+  <interface xsi:type="msMODEL:Provided" name="updateTravel"/>
+  <interface xsi:type="msMODEL:Required" name="queryRoute" is="//@interface.4"/>
+  <interface xsi:type="msMODEL:Provided" name="createRoute"/>
+  <interface xsi:type="msMODEL:Provided" name="queryRoute"/>
+  <interface xsi:type="msMODEL:Required" name="queryTrain" is="//@interface.7"/>
+  <interface xsi:type="msMODEL:Provided" name="createTrain"/>
+  <interface xsi:type="msMODEL:Provided" name="queryTrain"/>
+  <interface xsi:type="msMODEL:Provided" name="queryStation"/>
+  <interface xsi:type="msMODEL:Required" name="queryStation" is="//@interface.8"/>
+  <interface xsi:type="msMODEL:Provided" name="createStation"/>
+  <interface xsi:type="msMODEL:Required"/>
+</msMODEL:MicroServiceModel>

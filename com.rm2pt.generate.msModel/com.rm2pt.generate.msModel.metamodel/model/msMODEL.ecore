@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="msMODEL" nsURI="http://www.rm2pt.com/msMODEL" nsPrefix="msMODEL">
+  <eClassifiers xsi:type="ecore:EClass" name="MicroServiceModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="microservice" upperBound="-1"
+        eType="#//MicroService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
+        eType="#//Interface" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MicroService">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provide" upperBound="-1"
+        eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="require" upperBound="-1"
+        eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainmodel" upperBound="-1"
+        eType="ecore:EClass rEMODEL.ecore#//DomainModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="use" upperBound="-1" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="callchain" upperBound="-1"
+        eType="#//CallChain" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contract" upperBound="-1"
+        eType="ecore:EClass rEMODEL.ecore#//Contract" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" upperBound="-1"
+        eType="ecore:EClass rEMODEL.ecore#//Operation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="In" eSuperTypes="#//Interface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Provided" eSuperTypes="#//Interface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Required" eSuperTypes="#//Interface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="is" eType="#//Provided"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CallChain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lifeline" upperBound="-1"
+        eType="#//LifeLine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeLine">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="microservice" eType="#//MicroService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" upperBound="-1"
+        eType="#//Message" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guard" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//LifeLine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="ecore:EClass rEMODEL.ecore#//Operation"/>
+  </eClassifiers>
+</ecore:EPackage>

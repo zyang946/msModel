@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msMODEL="http://www.rm2pt.com/msMODEL">
+  <microservice name="ts-order-service" provide="//@interface.0 //@interface.1">
+    <domainclass name="ts-order-service">
+      <entity name="order" isCRUD="true" description="order">
+        <attribute name="orderId" type="String"/>
+        <attribute name="orderStatus" type="orderStatus">
+          <enumentity name="OrderStatus">
+            <enumitem name="PAID"/>
+            <enumitem name="UNPAID"/>
+          </enumentity>
+        </attribute>
+        <reference name="ordertouser" entity="//@microservice.0/@domainclass/@entity.0"/>
+      </entity>
+      <entity name="user"/>
+    </domainclass>
+  </microservice>
+  <microservice name="ts-admin-basicinfo-service" require="//@interface.0 //@interface.1"/>
+  <interface name="createOrder">
+    <method name="createOrder" returnType="void">
+      <parament Name="order" Type="Order"/>
+    </method>
+  </interface>
+  <interface name="updateOrder">
+    <method name="updateOrder"/>
+    <callchain>
+      <lifeline belongedService="ts-order-service"/>
+      <message/>
+    </callchain>
+  </interface>
+</msMODEL:MicroServiceModel>

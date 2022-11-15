@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Microservice diagram" domainClass="msMODEL::MicroServiceModel" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="MicroService" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditCompoment']" doubleClickDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openclass']" domainClass="msMODEL::MicroService">
+          <style xsi:type="style:SquareDescription" labelSize="14" showIcon="false" labelPosition="node" resizeKind="NSEW" width="20" height="20">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Interface" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditCompoment']" domainClass="msMODEL::Interface">
+          <style xsi:type="style:DotDescription" labelSize="10" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="10">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ServiceProvide" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ProvideDelete']" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditCompoment']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='MicroService']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='Interface']" targetFinderExpression="feature:provide">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ServiceRequire" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='RequireDelete']" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditCompoment']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='MicroService']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='Interface']" targetFinderExpression="feature:require">
+          <style targetArrow="OutputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Elements">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MicroService" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='MicroService']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::MicroService" referenceName="microservice">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Service'+container.microservice->filter(msMODEL::MicroService)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Interface" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='Interface']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::Interface" referenceName="interface">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Interface'+container.interface->filter(msMODEL::Interface)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditCompoment">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Relations">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ServiceProvide" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@edgeMappings[name='ServiceProvide']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="provide" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ServiceRequire" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@edgeMappings[name='ServiceRequire']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="require" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ProvideDelete" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="provide" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="RequireDelete" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="require" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Others">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="openclass" mappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='MicroService']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="DomainClass diagram" domainClass="msMODEL::DomainClass" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="EntityReference" preconditionExpression="aql:self.isReverseAssoication==false" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@containerMappings[name='Entity']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@containerMappings[name='Entity']" sourceFinderExpression="aql:self.eContainer()" targetExpression="val:self" domainClass="msMODEL::Reference" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <beginLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="SuperEntity" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='entityGenerationDelete']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@containerMappings[name='Entity']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="aql:self.superEntity">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Entity" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" domainClass="msMODEL::Entity">
+          <subNodeMappings name="EntityAttribute" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" semanticCandidatesExpression="feature:eAllContents" domainClass="msMODEL::Attribute">
+            <style xsi:type="style:SquareDescription" labelSize="10" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="10">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:self.type.oclIsTypeOf(msMODEL::EnumEntity)=true">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </conditionnalStyles>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" widthComputationExpression="10" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="EnumEntity" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" domainClass="msMODEL::EnumEntity">
+          <subNodeMappings name="EnumItem" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" semanticCandidatesExpression="feature:eAllContents" domainClass="msMODEL.EnumItem">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Elements">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Entity" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@containerMappings[name='Entity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::Entity" referenceName="entity">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Entity'+container.entity->filter(rEMODEL::Entity)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditEntityLabel">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="Property">
+            <tools xsi:type="tool:NodeCreationDescription" name="Attribute" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::Attribute" referenceName="attribute" variableName="newAttribute">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+container.attributes->filter(rEMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="EnumType" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::Attribute" referenceName="attribute" variableName="newAttributes">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+container.attributes->filter(msMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::EnumEntity" referenceName="enumentity" variableName="newType">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'EnumEntity' + container.eContainer().eAllContents(msMODEL::EnumEntity).name->asSet()->collect( n | container.eContainer().eAllContents(msMODEL::EnumEntity)->any(e | e.name = n))->size()"/>
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::EnumItem" referenceName="enumItem" variableName="newEnumIntem"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newEnumEntityType"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Relations">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="superEntity" label="Generation" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@edgeMappings[name='SuperEntity']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="superEntity" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="entityGenerationDelete" label="Generation Delete" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="superEntity"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="entityAssociationCreate" label="Association" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='DomainClass%20diagram']/@defaultLayer/@edgeMappings[name='EntityReference']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:Switch">
+                  <cases conditionExpression="aql:self.reference->exists( r | r.entity.name = source.name)">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL:Reference" referenceName="reference" variableName="newReference">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:source.name + 'to' + target.name"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="Association"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="isReverseAssoication" valueExpression="true"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <default>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL:Reference" referenceName="reference" variableName="newReference">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:source.name + 'to' + target.name"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="Association"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </default>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CallChain diagram" domainClass="msMODEL::CallChain" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="lifeLine" domainClass="msMODEL::LifeLine">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:ServiceName" labelPosition="node" resizeKind="NSEW" width="10" height="10">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="message" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@nodeMappings[name='lifeLine']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@nodeMappings[name='lifeLine']" targetFinderExpression="feature:To" domainClass="msMODEL::Message" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="msModel.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

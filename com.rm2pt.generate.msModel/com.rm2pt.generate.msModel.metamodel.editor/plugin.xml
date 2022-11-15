@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated msMODEL -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.rm2pt.generate.msmodel.metamodel.msMODEL.presentation.MsMODELModelWizardID"
+            name="%_UI_MsMODELModelWizard_label"
+            class="com.rm2pt.generate.msmodel.metamodel.msMODEL.presentation.MsMODELModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MsMODELModelFile.gif">
+         <description>%_UI_MsMODELModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated msMODEL -->
+      <editor
+            id="com.rm2pt.generate.msmodel.metamodel.msMODEL.presentation.MsMODELEditorID"
+            name="%_UI_MsMODELEditor_label"
+            icon="icons/full/obj16/MsMODELModelFile.gif"
+            extensions="msmodel"
+            class="com.rm2pt.generate.msmodel.metamodel.msMODEL.presentation.MsMODELEditor"
+            contributorClass="com.rm2pt.generate.msmodel.metamodel.msMODEL.presentation.MsMODELActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated msMODEL -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="rEMODEL.presentation.REMODELModelWizardID"
+            name="%_UI_REMODELModelWizard_label"
+            class="rEMODEL.presentation.REMODELModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/REMODELModelFile.gif">
+         <description>%_UI_REMODELModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated msMODEL -->
+      <editor
+            id="rEMODEL.presentation.REMODELEditorID"
+            name="%_UI_REMODELEditor_label"
+            icon="icons/full/obj16/REMODELModelFile.gif"
+            extensions="remodel"
+            class="rEMODEL.presentation.REMODELEditor"
+            contributorClass="rEMODEL.presentation.REMODELActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

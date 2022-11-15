@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:msMODEL="http://www.rm2pt.com/msMODEL" xmlns:rEMODEL="http://www.example.org/rEMODEL" name="trainticket">
+  <microservice name="travel-service" provide="//@interface.0 //@interface.1" require="//@interface.6 //@interface.9 //@interface.5 //@interface.2">
+    <domainmodel>
+      <entity name="AdminTrip">
+        <attributes name="trip">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Trip"/>
+        </attributes>
+        <attributes name="trainType">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="TrainType"/>
+        </attributes>
+        <attributes name="route">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Route"/>
+        </attributes>
+        <reference name="contains" entity="//@microservice.0/@domainmodel.0/@entity.1" type="Association"/>
+      </entity>
+      <entity isCRUD="true" name="Trip">
+        <attributes name="id">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="tripId">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="trainTypeName">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="routeId">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="statrtStationName">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="stationsName">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="terminalStationName">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="startTime">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="endTime">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+      </entity>
+      <entity name="TripAllDetail">
+        <attributes name="tripResponse">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="TripResponse"/>
+        </attributes>
+        <attributes name="trip">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Trip"/>
+        </attributes>
+        <reference name="contain" entity="//@microservice.0/@domainmodel.0/@entity.4" type="Association"/>
+        <reference name="contain" entity="//@microservice.0/@domainmodel.0/@entity.1" type="Association"/>
+      </entity>
+      <entity name="Travel">
+        <attributes name="trip">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Trip"/>
+        </attributes>
+        <attributes name="startPlace">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="endPlace">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="departureTime">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <reference name="contain" entity="//@microservice.0/@domainmodel.0/@entity.1" type="Association"/>
+      </entity>
+      <entity name="TripResponse">
+        <attributes name="trip">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="TripId"/>
+        </attributes>
+        <attributes name="trainTypeName">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="startStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="terminalStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="startTime">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="endTime">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="economyClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="confortClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="priceForEconomyClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="priceForConfortClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <reference name="contains" entity="//@microservice.0/@domainmodel.0/@entity.5" type="Association"/>
+      </entity>
+      <entity name="TripId">
+        <attributes name="type">
+          <type xsi:type="rEMODEL:EnumEntity" name="type">
+            <element name="G"/>
+            <element name="D"/>
+            <element name="Z"/>
+            <element name="T"/>
+            <element name="K"/>
+          </type>
+        </attributes>
+        <attributes name="number">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+      </entity>
+    </domainmodel>
+  </microservice>
+  <microservice name="station-service" provide="//@interface.8 //@interface.10">
+    <domainmodel name="Station">
+      <entity isCRUD="true" name="Station">
+        <attributes name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="stayTime">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+      </entity>
+    </domainmodel>
+  </microservice>
+  <microservice name="train-service" provide="//@interface.6 //@interface.7">
+    <domainmodel name="Train">
+      <entity isCRUD="true" name="TrainType">
+        <attributes name="id">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="economyClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="confortClass">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+        <attributes name="averageSpeed">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="int"/>
+        </attributes>
+      </entity>
+    </domainmodel>
+  </microservice>
+  <microservice name="route-service" provide="//@interface.3 //@interface.4">
+    <domainmodel name="Route">
+      <entity isCRUD="true" name="Route">
+        <attributes name="id">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="stations" ismultiple="true">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="distances" ismultiple="true">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </attributes>
+        <attributes name="startStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="endStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <reference name="contains" entity="//@microservice.3/@domainmodel.0/@entity.1" ismultiple="true" type="Association"/>
+      </entity>
+      <entity name="RouteInfo">
+        <attributes name="id">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="startStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="endStation">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="stationList">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+        <attributes name="distanceList">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </attributes>
+      </entity>
+    </domainmodel>
+  </microservice>
+  <interface xsi:type="msMODEL:Provided" name="createTravel"/>
+  <interface xsi:type="msMODEL:Provided" name="updateTravel"/>
+  <interface xsi:type="msMODEL:Required" name="queryRoute" is="//@interface.4"/>
+  <interface xsi:type="msMODEL:Provided" name="createRoute"/>
+  <interface xsi:type="msMODEL:Provided" name="queryRoute"/>
+  <interface xsi:type="msMODEL:Required" name="queryTrain" is="//@interface.7"/>
+  <interface xsi:type="msMODEL:Provided" name="createTrain"/>
+  <interface xsi:type="msMODEL:Provided" name="queryTrain"/>
+  <interface xsi:type="msMODEL:Provided" name="queryStation"/>
+  <interface xsi:type="msMODEL:Required" name="queryStation" is="//@interface.8"/>
+  <interface xsi:type="msMODEL:Provided" name="createStation"/>
+</msMODEL:MicroServiceModel>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msMODEL="http://www.rm2pt.com/msMODEL" name="trainticket">
+  <microservice name="travel-service"/>
+  <microservice name="station-service"/>
+  <microservice name="train-service"/>
+  <microservice name="route-service"/>
+</msMODEL:MicroServiceModel>

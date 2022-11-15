@@ -1,0 +1,37 @@
+MicroServiceModel trainTicket{
+	microservice {
+		MicroService orderService {
+			provide (createOrder,queryOrder)
+		},
+		MicroService routeService {
+			provide(createRoute,queryRoute)		
+		},
+		MicroService travelService {
+			require(RqueryOrder, RqueryRoute)
+		}
+	}
+	interface {
+		ProvidedInterface createOrder {
+			
+		},
+		ProvidedInterface queryOrder {
+			
+		},
+		RequiredInterface queryOrder RqueryOrder {
+			
+		},
+		ProvidedInterface createRoute {
+			
+		},
+		ProvidedInterface queryRoute {
+			
+		},
+		RequiredInterface queryRoute RqueryRoute {
+			
+		},
+		ProvidedInterface createTravel {
+				
+		}
+		
+	}
+}

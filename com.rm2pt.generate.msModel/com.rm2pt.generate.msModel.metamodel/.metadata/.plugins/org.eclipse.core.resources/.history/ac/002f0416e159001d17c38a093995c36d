@@ -1,0 +1,10 @@
+MicroServiceModel trainTicket{
+	microservice {
+		MicroService orderService {
+			
+		},
+		MicroService routeService {
+			
+		}
+	}
+}

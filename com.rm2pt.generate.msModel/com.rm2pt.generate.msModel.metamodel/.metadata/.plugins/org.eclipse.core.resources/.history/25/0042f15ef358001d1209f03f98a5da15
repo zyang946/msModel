@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Microservice diagram" domainClass="msMODEL::MicroServiceModel" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="ProvidedInterface" domainClass="msMODEL::Provided">
+          <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="2" shape="dot">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:container &lt;> self.eContainer()">
+            <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="2" labelPosition="node" shape="dot">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="RequiredInterface" domainClass="msMODEL::Required">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" labelPosition="node" workspacePath="/msModel.project.design/images/required-top.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:container &lt;> self.eContainer()">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/msModel.project.design/images/required-top.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="ServiceProvide" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ProvideDelete']" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditCompoment']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@containerMappings[name='MicroService']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='ProvidedInterface']" targetFinderExpression="feature:provide">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ServiceRequire" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='RequireDelete']" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditCompoment']" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@containerMappings[name='MicroService']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='RequiredInterface']" targetFinderExpression="feature:require">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="MicroService" label="Component" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditCompoment']" doubleClickDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openclass']" domainClass="msMODEL::MicroService">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="1" labelSize="9" roundedCorner="true" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Elements">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditCompoment">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="MicroService" label="Component" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@containerMappings[name='MicroService']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::MicroService" referenceName="microservice">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Service'+container.microservice->filter(msMODEL::MicroService)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="interface" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@nodeMappings[name='ProvidedInterface']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::Provided" referenceName="interface">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Interface'+container.interface->filter(msMODEL::Provided)->size()"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::Required" referenceName="interface"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Relations">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ServiceProvide" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@edgeMappings[name='ServiceProvide']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="provide" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ServiceRequire" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@edgeMappings[name='ServiceRequire']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="require" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="ProvideDelete" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="provide" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="RequireDelete" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="require" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Others">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="openclass" mappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Microservice%20diagram']/@defaultLayer/@containerMappings[name='MicroService']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CallChain diagram" domainClass="msMODEL::CallChain" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="message" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='deleteMessage']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@containerMappings[name='lifeLine']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@containerMappings[name='lifeLine']" targetFinderExpression="feature:to" sourceFinderExpression="aql:self.eContainer()" targetExpression="var:self" domainClass="msMODEL::Message" useDomainElement="true">
+          <conditionnalStyles predicateExpression="aql:self.guard.size() = 0">
+            <style sizeComputationExpression="0.5">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.number + ':' + self.action">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.guard.size() > 0">
+            <style sizeComputationExpression="0.5">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:'[' + self.guard + ']' + self.number + ':' + self.action">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <containerMappings name="lifeLine" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='edit']" domainClass="msMODEL::LifeLine">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="9" showIcon="false" labelExpression="feature:ServiceName" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Elements">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditLifeLine">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="ServiceName"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="lifeLine" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@containerMappings[name='lifeLine']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::LifeLine" referenceName="lifeline" variableName="newLifeLine">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ServiceName" valueExpression="aql:'Service'+container.lifeline->filter(msMODEL::LifeLine)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Relations">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="message" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='CallChain%20diagram']/@defaultLayer/@edgeMappings[name='message']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="msMODEL::Message" referenceName="message">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="number" valueExpression="aql:container.message->filter(msMODEL::Message)->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="to" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editLifeLine">
+            <mask mask="{0}"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteMessage">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="edit">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
+            <mask mask="{0}"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Conceptual Class Diagram" initialisation="true" domainClass="rEMODEL.DomainModel" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="EntityReference" doubleClickDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openCCDEEF']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="feature:entity" sourceFinderExpression="aql:self.eContainer()" targetExpression="var:self" domainClass="rEMODEL.Reference" useDomainElement="true" reconnections="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='entityAssociationReconnect']">
+          <conditionnalStyles predicateExpression="aql:self.ismultiple=true and self.type='Association'">
+            <style targetArrow="NoDecoration" sizeComputationExpression="0.5">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:let ref = self.eCrossReferences().reference->any(r | r.eCrossReferences()->last().name == self.eContainer().name) in if self.eCrossReferences()->excludes(self.eContainer()) and ref.isReverseAssoication == true then (if ref.ismultiple == true then ref.name + ':*' else ref.name + ':1' endif) else '' endif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:self.name + ':*'">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.ismultiple=false and self.type='Association'">
+            <style targetArrow="NoDecoration" sizeComputationExpression="0.5">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:let ref = self.eCrossReferences().reference->any(r | r.eCrossReferences()->last().name == self.eContainer().name) in if self.eCrossReferences()->excludes(self.eContainer()) and ref.isReverseAssoication == true then (if ref.ismultiple == true then ref.name + ':*' else ref.name + ':1' endif) else '' endif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:self.name + ':1'">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.type='Aggregation'">
+            <style sourceArrow="Diamond" targetArrow="NoDecoration" sizeComputationExpression="0.5">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:  let ref = self.eCrossReferences().reference->any(r | r.eCrossReferences()->last().name == self.eContainer().name) in if self.eCrossReferences()->excludes(self.eContainer()) and ref.isReverseAssoication == true then (if ref.ismultiple == true then ref.name + ':1...*' else ref.name + ':1' endif) else '' endif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.type='Composition'">
+            <style sourceArrow="FillDiamond" targetArrow="NoDecoration" sizeComputationExpression="0.5">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:  let ref = self.eCrossReferences().reference->any(r | r.eCrossReferences()->last().name == self.eContainer().name) in if self.eCrossReferences()->excludes(self.eContainer()) and ref.isReverseAssoication == true then (if ref.ismultiple == true then ref.name + ':1...*' else ref.name + ':1' endif) else '' endif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="SuperEntity" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='entityGenerationDelete']" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="aql:self.superEntity" reconnections="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='entityGenerationReconnect']">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="0.5">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Entity" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='']" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" doubleClickDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openCCDEEF']" domainClass="rEMODEL.Entity" childrenPresentation="List">
+          <subNodeMappings name="EntityAttribute" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" semanticCandidatesExpression="aql:self.attributes" doubleClickDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openCCDEEF']" domainClass="rEMODEL.Attribute">
+            <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:self.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)=true">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name + ' : ' + self.type.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW" height="20">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.type.oclIsTypeOf(rEMODEL::EnumEntity)=true">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name + ' : ' + self.type.name " labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW" height="20">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </conditionnalStyles>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="9" showIcon="false" widthComputationExpression="10" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="EnumEntity" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" semanticCandidatesExpression="aql:let enums = self.eAllContents(rEMODEL::EnumEntity) in enums.name->asSet()->collect( n | enums->any(e | e.name = n))" domainClass="rEMODEL.EnumEntity" childrenPresentation="List">
+          <subNodeMappings name="EnumItem" labelDirectEdit="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditEntityLabel']" semanticCandidatesExpression="feature:eAllContents" domainClass="rEMODEL.EnumItem">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="elementTools" label="Elements">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Entity" label="Class" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Entity" referenceName="entity">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Entity'+container.entity->filter(rEMODEL::Entity)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditEntityLabel">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="Property">
+            <tools xsi:type="tool:NodeCreationDescription" name="Attribute" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']" extraMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='EnumEntity'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='EnumEntity']/@subNodeMappings[name='EnumItem']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Attribute" referenceName="attributes" variableName="newAttribute">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+container.attributes->filter(rEMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.PrimitiveTypeCS" referenceName="type" variableName="defaultType">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="String"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="EnumType" label="EnumType" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']" extraMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='EnumEntity'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='EnumEntity']/@subNodeMappings[name='EnumItem']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Attribute" referenceName="attributes" variableName="newAttribute">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'attribute'+container.attributes->filter(rEMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.EnumEntity" referenceName="type" variableName="newEnumEntityType">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'EnumEntity' + container.eContainer().eAllContents(rEMODEL::EnumEntity).name->asSet()->collect( n | container.eContainer().eAllContents(rEMODEL::EnumEntity)->any(e | e.name = n))->size()"/>
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.EnumItem" referenceName="element" variableName="newEnumItem">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="ENUMITEMS"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newEnumEntityType"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Attribute" referenceName="attributes" variableName="newAttribute">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'attribute'+container.attributes->filter(rEMODEL::Attribute)->size()"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.EnumEntity" referenceName="type" variableName="newEnumEntityType">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'EnumEntity' + container.eContainer().eAllContents(rEMODEL::EnumEntity).name->asSet()->collect( n | container.eContainer().eAllContents(rEMODEL::EnumEntity)->any(e | e.name = n))->size()"/>
+                          <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.EnumItem" referenceName="element" variableName="newEnumItem">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="ENUMITEMS"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newEnumEntityType"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="relationTool" label="Relations">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="superEntity" label="Generation" precondition="aql:preTarget.differs(preSource)" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='SuperEntity']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="superEntity" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="entityGenerationReconnect">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="superEntity" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="entityGenerationDelete" label="Generation Delete">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="superEntity"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="entityAssociationCreate" label="Association" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:Switch">
+                  <cases conditionExpression="aql:self.reference->exists( r | r.entity.name = source.name)">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Reference" referenceName="reference">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:source.name + 'to' + target.name"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="Association"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="isReverseAssoication" valueExpression="true"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <default>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Reference" referenceName="reference">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:source.name + 'to' + target.name"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="Association"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </default>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="entityAssociationReconnect">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql:element.entity.reference->any( r | r.entity.name = element.eContainer().name) = null">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                  </subModelOperations>
+                </cases>
+                <default>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.entity.reference->any( r | r.entity.name = element.eContainer().name)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="isReverseAssoication" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </default>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:For" expression="aql:element.eInverse()->filter(rEMODEL::Reference)" iteratorName="refer">
+                  <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Ohters">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="openCCDEEF" forceRefresh="true" mappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Open EEF Wizard Action" id="org.eclipse.sirius.eef.actions.openPropertiesWizard"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="msModel.project.design.Services"/>
+  </ownedViewpoints>
+  <userColorsPalettes name="Dutch Seas">
+    <entries xsi:type="description:InterpolatedColor" name="Interpolated blue for Executions" colorValueComputationExpression="">
+      <colorSteps>
+        <associatedColor href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+      </colorSteps>
+      <colorSteps>
+        <associatedColor href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+      </colorSteps>
+    </entries>
+    <entries xsi:type="description:UserFixedColor" red="199" green="237" blue="232" name="Glint on the ocean"/>
+    <entries xsi:type="description:UserFixedColor" red="22" green="147" blue="165" name="Dutch teal"/>
+  </userColorsPalettes>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Operations">
+    <categories name="Default">
+      <pages name="OperationPage" labelExpression="Operation" domainClass="rEMODEL.Operation" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1"/>
+      <groups name="OperationGroup" labelExpression="Operation" domainClass="rEMODEL.Operation" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:TextDescription" name="EntityAttirbuteName" labelExpression="Operation Name:" valueExpression="feature:name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:DynamicMappingForDescription" iterator="parameter" iterableExpression="aql:self.parameter" forceRefresh="true">
+              <ifs predicateExpression="aql:true">
+                <widget xsi:type="properties:TextDescription" name="PrimitiveAttirbuteName" labelExpression="Parameter:" valueExpression="aql:parameter.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:parameter">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:true">
+                <widget xsi:type="properties:ButtonDescription" buttonLabelExpression="Delete Parameter">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:parameter">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+            </controls>
+            <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="2"/>
+          </controls>
+          <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Parameter">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Parameter" referenceName="parameter" variableName="newp">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="defaultValue"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+      <groups name="hiddenGroup" labelExpression="Group" domainClass="rEMODEL.Parameter" semanticCandidateExpression="aql:self.parameter">
+        <style barStyle="NO_TITLE" toggleStyle="NONE"/>
+      </groups>
+    </categories>
+  </extensions>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="CallMessage">
+    <categories name="Default">
+      <pages name="CallMessage" labelExpression="CallMessage" domainClass="rEMODEL.CallMessage" semanticCandidateExpression="var:self" groups="//@extensions.1/@categories.0/@groups.0 //@extensions.1/@categories.0/@groups.1"/>
+      <groups name="CallMessageOps" labelExpression="Target System Operation" domainClass="rEMODEL.CallMessage" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:SelectDescription" name="primetype" labelExpression="Selected Operation:" valueExpression="aql:self.op" candidatesExpression="aql:self.eCrossReferences()->filter(rEMODEL::ExecutionEnd).execution.owner.operation" candidateDisplayExpression="aql:candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="op" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+      <groups name="CallOperationGroup" labelExpression="Operation Signature" domainClass="rEMODEL.Operation" semanticCandidateExpression="aql:self.op">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:TextDescription" name="EntityAttirbuteName" labelExpression="Operation Name:" valueExpression="feature:name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:DynamicMappingForDescription" iterator="parameter" iterableExpression="aql:self.parameter" forceRefresh="true">
+              <ifs predicateExpression="aql:true">
+                <widget xsi:type="properties:TextDescription" name="PrimitiveAttirbuteName" labelExpression="Parameter:" valueExpression="aql:parameter.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:parameter">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:true">
+                <widget xsi:type="properties:ButtonDescription" buttonLabelExpression="Delete Parameter">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:parameter">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+            </controls>
+            <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="2"/>
+          </controls>
+          <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Parameter">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Parameter" referenceName="parameter" variableName="newp">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="defaultValue"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+    </categories>
+  </extensions>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
+    <categories name="Attribute">
+      <pages name="Attribute" labelExpression="Attribute" domainClass="rEMODEL.Attribute" semanticCandidateExpression="var:self" groups="//@extensions.2/@categories.0/@groups.0 //@extensions.2/@categories.0/@groups.1 //@extensions.2/@categories.0/@groups.2 //@extensions.2/@categories.0/@groups.3"/>
+      <groups name="PrimitiveTypeAttribute" labelExpression="Attribute" domainClass="rEMODEL.Attribute" semanticCandidateExpression="var:self" preconditionExpression="aql:self.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)">
+        <controls xsi:type="properties:TextDescription" name="PrimitiveAttirbuteName" labelExpression="Name:" valueExpression="feature:name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+          <style/>
+        </controls>
+        <controls xsi:type="properties:SelectDescription" name="primetype" labelExpression="Type:" valueExpression="aql:self.type.name" candidatesExpression="aql:OrderedSet{'String', 'Integer', 'Real', 'Boolean', 'Date'}" candidateDisplayExpression="aql:candidate">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.type">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+      <groups name="EntityTypeAttribute" labelExpression="Attribute" domainClass="rEMODEL.Attribute" semanticCandidateExpression="var:self" preconditionExpression="aql:self.type.oclIsTypeOf(rEMODEL::EntityType)">
+        <controls xsi:type="properties:TextDescription" name="EntityAttirbuteName" labelExpression="Name:" valueExpression="feature:name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:SelectDescription" name="primetype" labelExpression="Type:" valueExpression="aql:self.type.entity" candidatesExpression="aql:self.eResource().getContents().eContents(rEMODEL::Entity)" candidateDisplayExpression="aql:candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.type">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+      <groups name="EnumTypeAttribute" labelExpression="Enum Variable" domainClass="rEMODEL.Attribute" semanticCandidateExpression="var:self" preconditionExpression="aql:self.type.oclIsTypeOf(rEMODEL::EnumEntity)">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:TextDescription" name="EntityAttirbuteName" labelExpression="Variable Name:" valueExpression="feature:name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+      <groups name="EnumEntityGroup" labelExpression="Enum Entity" domainClass="rEMODEL.EnumEntity" semanticCandidateExpression="aql:self.type">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:TextDescription" labelExpression="Enum Entity Name:" valueExpression="feature:name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:DynamicMappingForDescription" iterator="enumitem" iterableExpression="aql:self.element" forceRefresh="true">
+              <ifs predicateExpression="aql:true">
+                <widget xsi:type="properties:TextDescription" name="PrimitiveAttirbuteName" labelExpression="Enum Item:" valueExpression="aql:enumitem.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:enumitem">
+                      <subModelOperations xsi:type="tool_1:Switch">
+                        <cases conditionExpression="aql:newValue.matches('^[A-Z]+')">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </subModelOperations>
+                        </cases>
+                        <default>
+                          <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="EnumName Warning">
+                            <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                              <initialOperation/>
+                            </buttons>
+                            <page name="Default Page" labelExpression="Enum name can only contain UpperCase words [A-Z]." semanticCandidateExpression="var:self"/>
+                          </subModelOperations>
+                        </default>
+                      </subModelOperations>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:true">
+                <widget xsi:type="properties:ButtonDescription" name="DeleteEnumItem" buttonLabelExpression="Delete Parameter">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:enumitem">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+            </controls>
+            <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="2"/>
+          </controls>
+          <controls xsi:type="properties:ButtonDescription" name="AddEnumItem" buttonLabelExpression="Add EnumItem">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.type">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.EnumItem" referenceName="element" variableName="newitem">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'ENUMITEM' + self.eContainer().element->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+    </categories>
+    <categories name="Enum">
+      <pages name="EnumPage" labelExpression="EnumItem" domainClass="rEMODEL::EnumItem" semanticCandidateExpression="var:self" groups="//@extensions.2/@categories.1/@groups.0"/>
+      <groups name="EnumItemGroup" domainClass="rEMODEL.EnumItem">
+        <controls xsi:type="properties:TextDescription" name="PrimitiveAttirbuteName" labelExpression="EnumItem Name:" valueExpression="aql:self.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:enumitem">
+              <subModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql:newValue.matches('^[A-Z]+')">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                  </subModelOperations>
+                </cases>
+                <default>
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="EnumName Warning">
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="Default Page" labelExpression="Enum name can only contain UpperCase words [A-Z]." semanticCandidateExpression="var:self"/>
+                  </subModelOperations>
+                </default>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+          <style/>
+        </controls>
+        <style barStyle="NO_TITLE" toggleStyle="NONE"/>
+      </groups>
+    </categories>
+    <categories name="Association">
+      <pages name="AssociationPage" labelExpression="Association" domainClass="rEMODEL::Reference" semanticCandidateExpression="var:self" groups="//@extensions.2/@categories.2/@groups.0 //@extensions.2/@categories.2/@groups.1 //@extensions.2/@categories.2/@groups.2"/>
+      <groups name="AssociationGroup" labelExpression="aql: 'Assocation (' + self.eInverse()->filter(rEMODEL::Entity).name + '->' + self.entity.name + ')'" domainClass="rEMODEL::Reference" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:TextDescription" name="AssocationName" labelExpression="Name:" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql:newValue.matches('^[a-zA-Z_]+[a-zA-Z0-9_]*')">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                  </subModelOperations>
+                </cases>
+                <default>
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Invalid Value">
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="InvalidWarning" labelExpression="aql: 'The input value: &quot;' + newValue + '&quot;,\n\n' + 'please do not contain blank space and special notation,\n\n' + 'only word (a-z)(A-Z), number (0-9), and underline (_) are acceptable. '" semanticCandidateExpression="var:self"/>
+                  </subModelOperations>
+                </default>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="AssocationRelation" labelExpression="Relationship:" valueExpression="aql:self.type" candidatesExpression="aql:OrderedSet{'Association', 'Aggregation', 'Composition'}" candidateDisplayExpression="aql:candidate">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="AssociationMultiplicity" labelExpression="Multiplicity:" valueExpression="aql:if self.ismultiple == false then '1' else '*' endif" candidatesExpression="aql:OrderedSet{'1', '*'}" candidateDisplayExpression="aql:candidate">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:newValue=='1'">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:newValue=='*'">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="true"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+        </controls>
+        <style expandedByDefault="true"/>
+      </groups>
+      <groups name="AssociationReverseGroup" labelExpression="aql: 'Assocation (' + self.entity.name + '->' + self.eInverse()->filter(rEMODEL::Entity).name  + ')'" domainClass="rEMODEL::Reference" semanticCandidateExpression="var:self" preconditionExpression="aql: self.entity.reference->any( r | r.entity.name = self.eContainer().name).isReverseAssoication == true">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:TextDescription" name="rEMODEL::Reference name" labelExpression="Name:" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.entity.reference->any( r | r.entity.name = self.eContainer().name).name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql:newValue.matches('^[a-zA-Z_]+[a-zA-Z0-9_]*')">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.entity.reference->any( r | r.entity.name = self.eContainer().name)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                  </subModelOperations>
+                </cases>
+                <default>
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Invalid Value">
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="InvalidWarning" labelExpression="aql: 'The input value: &quot;' + newValue + '&quot;,\n\n' + 'please do not contain blank space and special notation,\n\n' + 'only word (a-z)(A-Z), number (0-9), and underline (_) are acceptable. '" semanticCandidateExpression="var:self"/>
+                  </subModelOperations>
+                </default>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="AssocationRelation" labelExpression="Relationship:" valueExpression="aql:self.type" candidatesExpression="aql:OrderedSet{'Association', 'Aggregation', 'Composition'}" candidateDisplayExpression="aql:candidate">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.entity.reference->any( r | r.entity.name = self.eContainer().name)">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="AssociationMultiplicity" labelExpression="Multiplicity:" valueExpression="aql:if self.entity.reference->any( r | r.entity.name = self.eContainer().name).ismultiple == false then '1' else '*' endif" candidatesExpression="aql:OrderedSet{'1', '*'}" candidateDisplayExpression="aql:candidate">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.entity.reference->any( r | r.entity.name = self.eContainer().name)">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:newValue=='1'">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:newValue=='*'">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="true"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="rEMODEL::Reference isReverseAssoication" labelExpression="Seperate the bi-directional assocation into two associations" valueExpression="aql:self.entity.reference->any( r|r.entity.name = self.eContainer().name).isReverseAssoication">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.entity.reference->any( r | r.entity.name = self.eContainer().name)">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="isReverseAssoication" valueExpression="aql:false"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+        </controls>
+      </groups>
+      <groups name="ExtraFunctionsGroup" labelExpression="Extra Functions" domainClass="rEMODEL::Reference" semanticCandidateExpression="var:self" preconditionExpression="aql: self.entity.reference->any( r | r.entity.name = self.eContainer().name).isReverseAssoication == false">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:CheckboxDescription" name="ExtractIsReverseAssoication" labelExpression="Merge this assoication with the reverse association as bi-direactional association" valueExpression="aql:self.isReverseAssoication">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="isReverseAssoication" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:TextDescription">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.entity.reference->any( r | r.entity.name = self.eContainer().name)">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+        </controls>
+      </groups>
+    </categories>
+  </extensions>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="sirius_default_rules_properties">
+    <categories name="Default Category">
+      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.3/@categories.0/@groups.0"/>
+      <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self"/>
+    </categories>
+  </extensions>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="CombinedFragment">
+    <categories name="Default Category">
+      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.4/@categories.0/@groups.0"/>
+      <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self"/>
+    </categories>
+  </extensions>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Service">
+    <categories name="Default Category">
+      <pages name="Service" labelExpression="Service" domainClass="rEMODEL::Service" semanticCandidateExpression="var:self" groups="//@extensions.5/@categories.0/@groups.1 //@extensions.5/@categories.0/@groups.0"/>
+      <groups name="SystemOperations" labelExpression="System Operations" domainClass="rEMODEL::Service" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:ListDescription" valueExpression="aql:self.operation" displayExpression="aql:value.name + ' ('  + value.parameter.name->sep(', ') + ')'">
+            <onClickOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+            </onClickOperation>
+            <style/>
+          </controls>
+          <layout xsi:type="properties:FillLayoutDescription"/>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+      <groups name="TemporaryVariables" labelExpression="Temporary Variable " domainClass="rEMODEL::Service" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:DynamicMappingForDescription" iterator="var" iterableExpression="aql:self.temp_property" forceRefresh="true">
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)">
+                <widget xsi:type="properties:TextDescription" name="TempPropertyName" labelExpression="Name:" valueExpression="aql:var.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)">
+                <widget xsi:type="properties:SelectDescription" name="primetype" labelExpression="Type:" valueExpression="aql:var.type.name" candidatesExpression="aql:OrderedSet{'String', 'Integer', 'Real', 'Boolean', 'Date'}" candidateDisplayExpression="aql:candidate">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var.type">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)">
+                <widget xsi:type="properties:ButtonDescription" buttonLabelExpression="Delete Variable">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+            </controls>
+            <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="3"/>
+          </controls>
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:DynamicMappingForDescription" iterator="var" iterableExpression="aql:self.temp_property" forceRefresh="true">
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:TextDescription" name="TempPropertyName" labelExpression="Name:" valueExpression="aql:var.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:SelectDescription" name="primetype" labelExpression="Type:" valueExpression="aql:var.type.entity" candidatesExpression="aql:self.eResource().getContents().eContents(rEMODEL::DomainModel).entity" candidateDisplayExpression="aql:candidate.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var.type">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:CheckboxDescription" labelExpression="isMultipe" valueExpression="aql:var.ismultiple">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="aql:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:ButtonDescription" buttonLabelExpression="Delete Variable">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+            </controls>
+            <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="4"/>
+          </controls>
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Primitive Variable">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Attribute" referenceName="temp_property" variableName="newAttribute">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'attribute'+self.eContainerOrSelf(rEMODEL::Service).temp_property->filter(rEMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.PrimitiveTypeCS" referenceName="type" variableName="defaultType">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="String"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </controls>
+            <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Entity Variable">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Attribute" referenceName="temp_property" variableName="newAttribute">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'attribute'+self.eContainerOrSelf(rEMODEL::Service).temp_property->filter(rEMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.EntityType" referenceName="type" variableName="newEntityType">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="aql:self.eResource().getContents().eContents(rEMODEL::DomainModel).entity->first()"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newEntityType"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </controls>
+            <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
+          </controls>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+    </categories>
+  </extensions>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="SystemService">
+    <categories name="Default Category">
+      <pages name="Default Page" labelExpression="Page" domainClass="rEMODEL::UseCaseModel" semanticCandidateExpression="var:self" groups="//@extensions.6/@categories.0/@groups.0"/>
+      <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self"/>
+      <groups name="SystemTemporaryVariables" labelExpression="Temporary Variable " domainClass="rEMODEL::Service" semanticCandidateExpression="aql:self.service->any(s|s.name.contains('System'))">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:DynamicMappingForDescription" iterator="var" iterableExpression="aql:self.temp_property" forceRefresh="true">
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)">
+                <widget xsi:type="properties:TextDescription" name="TempPropertyName" labelExpression="Name:" valueExpression="aql:var.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)">
+                <widget xsi:type="properties:SelectDescription" name="primetype" labelExpression="Type:" valueExpression="aql:var.type.name" candidatesExpression="aql:OrderedSet{'String', 'Integer', 'Real', 'Boolean', 'Date'}" candidateDisplayExpression="aql:candidate">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var.type">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::PrimitiveTypeCS)">
+                <widget xsi:type="properties:ButtonDescription" buttonLabelExpression="Delete Variable">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+            </controls>
+            <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="3"/>
+          </controls>
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:DynamicMappingForDescription" iterator="var" iterableExpression="aql:self.temp_property" forceRefresh="true">
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:TextDescription" name="TempPropertyName" labelExpression="Name:" valueExpression="aql:var.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                  <style/>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:SelectDescription" name="primetype" labelExpression="Type:" valueExpression="aql:var.type.entity" candidatesExpression="aql:self.eResource().getContents().eContents(rEMODEL::DomainModel).entity" candidateDisplayExpression="aql:candidate.name">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var.type">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:CheckboxDescription" labelExpression="isMultipe" valueExpression="aql:var.ismultiple">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="aql:newValue"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+              <ifs predicateExpression="aql:var.type.oclIsTypeOf(rEMODEL::EntityType)">
+                <widget xsi:type="properties:ButtonDescription" buttonLabelExpression="Delete Variable">
+                  <initialOperation>
+                    <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:var">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </firstModelOperations>
+                  </initialOperation>
+                </widget>
+              </ifs>
+            </controls>
+            <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="4"/>
+          </controls>
+          <controls xsi:type="properties:ContainerDescription">
+            <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Primitive Variable">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Attribute" referenceName="temp_property" variableName="newAttribute">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'attribute'+self.eContainerOrSelf(rEMODEL::Service).temp_property->filter(rEMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.PrimitiveTypeCS" referenceName="type" variableName="defaultType">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="String"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </controls>
+            <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Entity Variable">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.Attribute" referenceName="temp_property" variableName="newAttribute">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'attribute'+self.eContainerOrSelf(rEMODEL::Service).temp_property->filter(rEMODEL::Attribute)->size()"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="ismultiple" valueExpression="false"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rEMODEL.EntityType" referenceName="type" variableName="newEntityType">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="aql:self.eResource().getContents().eContents(rEMODEL::DomainModel).entity->first()"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newEntityType"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </controls>
+            <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
+          </controls>
+        </controls>
+        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+      </groups>
+    </categories>
+  </extensions>
+</description:Group>

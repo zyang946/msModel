@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated msMODEL -->
+      <package
+            uri="http://www.rm2pt.com/msMODEL"
+            class="com.rm2pt.generate.msmodel.metamodel.msMODEL.MsMODELPackage"
+            genModel="model/msMODEL.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated msMODEL -->
+      <package
+            uri="http://www.example.org/rEMODEL"
+            class="rEMODEL.REMODELPackage"
+            genModel="model/msMODEL.genmodel"/>
+   </extension>
+
+</plugin>

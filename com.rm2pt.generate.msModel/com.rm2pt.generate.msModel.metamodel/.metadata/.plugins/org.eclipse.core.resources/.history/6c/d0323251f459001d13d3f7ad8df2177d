@@ -1,0 +1,52 @@
+MicroServiceModel trainTicket{
+	microservice {
+		MicroService orderService {
+			provide (createOrder,queryOrder)
+			DomainModel orderService {
+				@AutoCRUD Entity Order {
+					OrderId : String
+					TicketId : String
+					AccoutId : String
+					CreateTime : String
+					OrderStatus : OrderStatus[NOTPAID|PAID|CANCELED]
+				}
+			},
+		},
+		MicroService routeService {
+			provide(createRoute,queryRoute)
+
+		},
+		MicroService travelService {
+			require(RqueryOrder, RqueryRoute)
+		}
+	}
+	interface {
+		ProvidedInterface createOrder {
+			[Operation]
+			createOrder()
+		},
+		ProvidedInterface queryOrder {
+			
+		},
+		RequiredInterface RqueryOrder {
+			is queryOrder
+			
+		},
+		ProvidedInterface createRoute {
+			
+		},
+		ProvidedInterface queryRoute {
+			
+		},
+		RequiredInterface RqueryRoute {
+			is queryRoute
+			
+		},
+		ProvidedInterface createTravel {
+			[Operation]
+			createTravel()
+				
+		}
+		
+	}
+}

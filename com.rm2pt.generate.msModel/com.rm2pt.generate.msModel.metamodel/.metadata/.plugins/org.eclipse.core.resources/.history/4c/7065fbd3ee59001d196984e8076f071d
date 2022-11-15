@@ -1,0 +1,29 @@
+MicroServiceModel trainTicket{
+	microservice {
+		MicroService orderService {
+			provide (createOrder,queryOrder)
+			domainmodel{
+				DomainModel orderService {
+					
+				}
+			}
+		},
+		MicroService routeService {
+			provide(createRoute,queryRoute)		
+		}
+	}
+	interface {
+		ProvidedInterface createOrder {
+			
+		},
+		ProvidedInterface queryOrder {
+			
+		},
+		ProvidedInterface createRoute {
+			
+		},
+		ProvidedInterface queryRoute {
+			
+		}
+	}
+}

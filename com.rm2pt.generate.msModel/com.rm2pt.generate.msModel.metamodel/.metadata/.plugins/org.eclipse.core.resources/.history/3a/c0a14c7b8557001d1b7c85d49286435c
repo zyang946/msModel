@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:msMODEL="http://www.rm2pt.com/msMODEL" name="trainticket">
+  <microservice name="travel-service" require="//@interface.1"/>
+  <microservice name="station-service" provide="//@interface.0"/>
+  <microservice name="train-service"/>
+  <microservice name="route-service"/>
+  <interface xsi:type="msMODEL:Provided" name="queryStation"/>
+  <interface xsi:type="msMODEL:Required" name="" is="//@interface.0"/>
+  <interface xsi:type="msMODEL:Provided" name="createStation"/>
+</msMODEL:MicroServiceModel>

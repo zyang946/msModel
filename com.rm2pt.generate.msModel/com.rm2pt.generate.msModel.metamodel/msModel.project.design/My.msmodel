@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msMODEL="http://www.rm2pt.com/msMODEL">
+  <microservice name="ts-order-service" provide="//@interface.0"/>
+  <microservice name="ts-admin-basicinfo-service" require="//@interface.0"/>
+  <interface name="createorder"/>
+</msMODEL:MicroServiceModel>

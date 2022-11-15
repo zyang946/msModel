@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:msMODEL="http://www.rm2pt.com/msMODEL" name="trainticket">
+  <microservice name="travel-service" provide="//@interface.0 //@interface.1" require="//@interface.6 //@interface.9 //@interface.5 //@interface.2"/>
+  <microservice name="station-service" provide="//@interface.8 //@interface.10"/>
+  <microservice name="train-service" provide="//@interface.6 //@interface.7"/>
+  <microservice name="route-service" provide="//@interface.3 //@interface.4"/>
+  <interface xsi:type="msMODEL:Provided" name="createTravel"/>
+  <interface xsi:type="msMODEL:Provided" name="updateTravel"/>
+  <interface xsi:type="msMODEL:Required" name="queryRoute" is="//@interface.4"/>
+  <interface xsi:type="msMODEL:Provided" name="createRoute"/>
+  <interface xsi:type="msMODEL:Provided" name="queryRoute"/>
+  <interface xsi:type="msMODEL:Required" name="queryTrain" is="//@interface.7"/>
+  <interface xsi:type="msMODEL:Provided" name="createTrain"/>
+  <interface xsi:type="msMODEL:Provided" name="queryTrain"/>
+  <interface xsi:type="msMODEL:Provided" name="queryStation"/>
+  <interface xsi:type="msMODEL:Required" name="queryStation" is="//@interface.8"/>
+  <interface xsi:type="msMODEL:Provided" name="createStation"/>
+  <interface xsi:type="msMODEL:Provided" name="Interface9"/>
+  <interface xsi:type="msMODEL:Required" name="" is="//@interface.11"/>
+</msMODEL:MicroServiceModel>

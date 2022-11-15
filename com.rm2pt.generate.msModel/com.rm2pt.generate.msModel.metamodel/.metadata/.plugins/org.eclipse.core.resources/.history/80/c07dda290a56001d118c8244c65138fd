@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msMODEL="http://www.rm2pt.com/msMODEL">
+  <microservice name="ts-order-service" provide="//@interface.0 //@interface.1">
+    <domainclass name="ts-order-service">
+      <entity name="order" isCRUD="true" description="order">
+        <attribute name="orderId" type="String"/>
+        <attribute name="orderStatus" type="orderStatus">
+          <enumentity name="OrderStatus">
+            <enumitem name="PAID"/>
+            <enumitem name="UNPAID"/>
+          </enumentity>
+        </attribute>
+        <reference name="ordertouser" ismultiple="true" isReverseAssociation="true" isAggreation="true" isComposition="true" association="//@microservice.0/@domainclass/@entity.1"/>
+      </entity>
+      <entity name="user"/>
+    </domainclass>
+  </microservice>
+  <microservice name="ts-admin-basicinfo-service" provide="//@interface.3" require="//@interface.0 //@interface.1 //@interface.2"/>
+  <microservice name="ts-user-service" provide="//@interface.2"/>
+  <interface name="createOrder">
+    <method name="createOrder" returnType="void">
+      <parament Name="order" Type="Order"/>
+    </method>
+  </interface>
+  <interface name="updateOrder">
+    <method name="updateOrder"/>
+    <callchain/>
+  </interface>
+  <interface name="createUser">
+    <method name="createUser"/>
+  </interface>
+  <interface name="createAdminOrder">
+    <callchain name="createNewAdminOrder">
+      <lifeline ServiceName="UserService" sendMessage="//@interface.3/@callchain.0/@message.0" microservice="//@microservice.2"/>
+      <lifeline ServiceName="ts-order-service" sendMessage="//@interface.3/@callchain.0/@message.1" microservice="//@microservice.0"/>
+      <lifeline ServiceName="ts-admin-basicinfo-service" microservice="//@microservice.1"/>
+      <message number="1" to="//@interface.3/@callchain.0/@lifeline.0" action="createUser" contain="//@interface.2/@method.0"/>
+      <message number="2" to="//@interface.3/@callchain.0/@lifeline.1" action="createOrder" contain="//@interface.0/@method.0"/>
+    </callchain>
+  </interface>
+</msMODEL:MicroServiceModel>

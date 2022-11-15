@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msMODEL:MicroServiceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:msMODEL="http://www.rm2pt.com/msMODEL" name="trainticket">
+  <interface xsi:type="msMODEL:Provided" name="createOrder">
+    <service name="createOrder">
+      <operation name="createOrder"/>
+    </service>
+    <contract service="//@interface.0/@service.0"/>
+  </interface>
+  <interface xsi:type="msMODEL:Provided" name="Interface2"/>
+  <interface xsi:type="msMODEL:Required"/>
+  <interface xsi:type="msMODEL:Provided" name="Interface3"/>
+  <interface xsi:type="msMODEL:Required"/>
+</msMODEL:MicroServiceModel>

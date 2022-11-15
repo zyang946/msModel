@@ -1,0 +1,34 @@
+package msModel.project.design;
+
+import java.util.Optional;
+
+import org.eclipse.sirius.business.api.helper.task.ICommandTask;
+import org.eclipse.sirius.business.api.helper.task.IModelOperationManager;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.common.tools.api.interpreter.IInterpreter;
+import org.eclipse.sirius.ecore.extender.business.api.accessor.ModelAccessor;
+import org.eclipse.sirius.tools.api.command.CommandContext;
+import org.eclipse.sirius.tools.api.command.ui.UICallBack;
+import org.eclipse.sirius.viewpoint.description.tool.ModelOperation;
+
+public class DialogModelOperationManager implements IModelOperationManager {
+
+    @Override
+    public Optional<ICommandTask> createTask(ModelOperation modelOperation, ModelAccessor modelAccessor, UICallBack uiCallback,
+             Session session, IInterpreter interpreter, CommandContext context) {
+        if (modelOperation instanceof DialogModelOperation) {
+            DialogModelOperation dialogModelOperation = (DialogModelOperation) modelOperation;
+            return Optional.of(new DialogTask(context, modelAccessor, interpreter, session, dialogModelOperation));
+        }
+        return Optional.empty();
+    }
+
+	@Override
+	public Optional<ICommandTask> createTask(ModelOperation arg0, ModelAccessor arg1, UICallBack arg2, Session arg3,
+			IInterpreter arg4, CommandContext arg5) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

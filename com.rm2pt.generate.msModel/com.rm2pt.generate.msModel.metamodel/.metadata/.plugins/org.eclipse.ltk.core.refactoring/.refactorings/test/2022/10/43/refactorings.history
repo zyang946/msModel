@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;My.msmodel&apos; to &apos;test&apos;" description="Move &apos;My.msmodel&apos; to &apos;test&apos;" destination="/test" element1="/msModel.project.design/My.msmodel" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1666183831429" updateReferences="true"/>
+</session>
